@@ -49,7 +49,7 @@ void ConfigurationFile()
     if (!ConfigurationFile)
     {
         cerr << "Error opening : " << configfile << endl;
-        reutrn -1;
+        return -1;
     }
 
     cout << "Reading in GridX_IdxRange: " << ??? << "... done!" << endl;
@@ -97,13 +97,13 @@ void CloudCoverageMap_cloudinessIndex()
 void CloudCoverageMap_LMHSymbols()
 {
     int CloudCoverValue = 0;
-    string CloudinessSymbol = None;
+    string CloudinessSymbol = "None";
     if (CloudCoverValue >= 0 && CloudCoverValue < 35) {
-        CloudinessSymbol = L;
+        CloudinessSymbol = "L";
     } else if (CloudCoverValue >= 35 && CloudCoverValue < 65) {
-        CloudinessSymbol = M;
+        CloudinessSymbol = "M";
     } else if (CloudCoverValue >= 65 && CloudCoverValue < 100) {
-        CloudinessSymbol = L;
+        CloudinessSymbol = "L";
     }
 }
 
@@ -138,13 +138,13 @@ void AtmosphericPressureMap_PressureIndex()
 void AtmosphericPressureMap_LMHSymbols()
 {
     int OriginalPressureValue = 0;
-    string PressureSymbol = None;
+    string PressureSymbol = "None";
     if (OriginalPressureValue >= 0 && OriginalPressureValue < 35) {
-        PressureSymbol = L;
+        PressureSymbol = "L";
     } else if (OriginalPressureValue >= 35 && OriginalPressureValue < 65) {
-        PressureSymbol = M;
+        PressureSymbol = "M";
     } else if (OriginalPressureValue >= 65 && OriginalPressureValue < 100) {
-        PressureSymbol = L;
+        PressureSymbol = "L";
     }
 }
 
