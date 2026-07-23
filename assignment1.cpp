@@ -154,3 +154,41 @@ void option2()
     ifstream citylocation;
     citylocation.open("citylocation.txt");
 }
+
+
+void map(int ** grid, int width, int height)
+{
+
+    // print the top border
+    for (int x = -1; x <= width; x++) {
+        cout << "#  ";
+    }
+    cout << endl;
+
+    // print the middle grid
+    for (int y = height - 1; y >= 0; y--) {
+        cout << setw(2) << y << "  "; // the left coordinate values
+        for (int x = -1; x <= width; x++) {
+            if (x == -1 || x == width) {
+                cout << "#  ";
+            } else if (grid[x][y] == 0) {
+                cout << " ";
+            } else {
+                cout << grid[x][y];
+            }
+        }
+        cout << endl;
+    }
+
+    // print the low border
+    for (int x = -1 ; x <= width; x++) {
+        cout << "#  ";
+    }
+    cout << endl;
+
+    // print the low coordinate values
+    for (int x = 0; x < width; x++) {
+        cout << x << "   ";
+    }
+    cout << endl;
+}
