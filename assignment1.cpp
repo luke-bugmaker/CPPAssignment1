@@ -148,14 +148,6 @@ void AtmosphericPressureMap_LMHSymbols()
     }
 }
 
-void option2()
-// Display city map
-{
-    ifstream citylocation;
-    citylocation.open("citylocation.txt");
-}
-
-
 void map(int ** grid, int width, int height)
 {
     // print the top border
