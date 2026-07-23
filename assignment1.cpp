@@ -158,7 +158,6 @@ void option2()
 
 void map(int ** grid, int width, int height)
 {
-
     // print the top border
     for (int x = -1; x <= width; x++) {
         cout << "#  ";
