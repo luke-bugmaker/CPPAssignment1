@@ -52,6 +52,9 @@ void ConfigurationFile()
         return -1;
     }
 
+    while (ConfigurationFile.peek() == '/') {
+        ConfigurationFile.ignore(numeric_limits<streamsize>::max(), '\n')
+    }
     cout << "Reading in GridX_IdxRange: " << ??? << "... done!" << endl;
     cout << "Reading in GridY_IdxRange: " << ??? << "... done!" << endl;
 
